@@ -7,11 +7,9 @@
 </head>
 <body>
 <script>
-    let y=prompt("Inserte el radio");
-    y=parseInt(y);
-    let resultado= 4/3 * 3.14 * y;
-    alert(resultado);
+    let radio=parseInt(prompt("Inserte el radio"));
+    let volumen=(4/3)*Math.PI*Math.pow(radio,3);
+    alert("El volumen de la esfera con radio " + radio + "es:" + volumen);
 </script>
-    
 </body>
 </html>
