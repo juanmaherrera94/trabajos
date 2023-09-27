@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function suma(numero1, numero2) {
+            return numero1 + numero2;
+          }
+          function resta(numero1, numero2) {
+            return numero1 - numero2;
+          }
+          
+          function multiplicacion(numero1, numero2) {
+            return numero1 * numero2;
+          }
+          
+          function division(numero1, numero2) {
+            if (numero2 === 0) {
+              alert("No se puede dividir por cero.");
+              return;
+            }
+            return numero1 / numero2;
+          }
+          
+          function calcularOperacion() {
+            const operacion = prompt("Elige una operacion: suma, resta, multiplicacion o division\n");
+          
+            const numero1 = parseFloat(prompt("Ingresa el primer numero\n"));
+            const numero2 = parseFloat(prompt("Ingresa el segundo numero\n"));
+          
+            let resultado;
+          
+            switch (operacion) {
+              case "suma":
+                resultado = suma(numero1, numero2);
+                break;
+              case "resta":
+                resultado = resta(numero1, numero2);
+                break;
+              case "multiplicacion":
+                resultado = multiplicacion(numero1, numero2);
+                break;
+              case "division":
+                resultado = division(numero1, numero2);
+                break;
+            }
+          
+            alert(`El resultado de ${operacion} entre ${numero1} y ${numero2} es: ${resultado}`);
+          }
+          calcularOperacion();
+    </script>
+</body>
+</html>
