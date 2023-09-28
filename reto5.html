@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+        src="reto5.js">
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let base=parseInt(prompt("Inserte la base"));
+       let altura=parseInt(prompt("Inserte la altura"));
+       let lado1=parseInt(prompt("Inserte el primer lado"));
+       let lado2=parseInt(prompt("Inserte el segundo lado"));
+       let lado3=parseInt(prompt("Inserte el tercer lado"));
+       let radio=parseInt(prompt("Inserta el radio"));
+        document.write("El area del triangulo es " + calcularAreaTriangulo(base,altura) +"<br>");
+        document.write("El perimetro del triangulo equilatero es " + calcularPerimetroTrianguloEquilatero(lado1) +"<br>");
+        document.write("El perimetro del triangulo isosceles " + calcularPerimetroTrianguloIsosceles(lado1,lado2,base) +"<br>");
+        document.write("El perimetro del triangulo escalero " + calcularPerimetroTrianguloEscaleno(lado1,lado2,lado3) +"<br>");
+        document.write("El area de un cuadrado " + calcularAreaCuadrado(lado1) +"<br>");
+        document.write("El area de un rectangulo " + calcularPerimetroCuadrado(lado1) +"<br>");
+        document.write("El perimetro de un rectangulo " + calcularAreaRectangulo(base,altura) +"<br>");
+        document.write("El area del circulo " + calcularPerimetroRectangulo(base,altura) +"<br>");
+        document.write("La longitud de la circuferencia " + calcularAreaCirculo(radio) +"<br>");
+    </script>
+</body>
+</html>

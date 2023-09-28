@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="reto5.js">
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function perimetroTriangulo(a,b,c){
+            if (a==="undefined" && c==="undefined"){
+                return calcularPerimetroTrianguloEquilatero(a);
+            } else if ( c === 'undefined') {
+        return calcularPerimetroTrianguloIsosceles(a, b, a);
+    } else {
+        return calcularPerimetroTrianguloEscaleno(a, b, c);
+    }
+ }
+ function perimetroParalelogramo(lado1, lado2) {
+    if (lado2 === 'undefined') {
+        return calcularPerimetroCuadrado(lado1);
+    } else {
+        return calcularPerimetroRectangulo(lado1, lado2);
+    }
+}
+    </script>
+</body>
+</html>
