@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Crear un objeto
+const miObjeto = {
+  nombre: "John",
+  edad: 30,
+  ciudad: "New York"
+};
+
+alert("Usando for...in y for...of:");
+for (const key in miObjeto) {
+  if (miObjeto.hasOwnProperty(key)) {
+    alert(`Nombre de la variable: ${key}`);
+  }
+}
+    </script>
+</body>
+</html>
