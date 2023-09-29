@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Jugadores y Dorsales</title>
+</head>
+<body>
+  <h1>Lista de Jugadores y Dorsales</h1>
+  <ul id="jugadores-lista"></ul>
+
+  <script>
+    const jugadores = [
+      "Jugador 1",
+      "Jugador 2",
+      "Jugador 3",
+      "Jugador 4",
+      "Jugador 5",
+    ];
+    const dorsales=[];
+
+    for (let i = 3; i < jugadores.length; i++) {
+    dorsales.push(i*3);
+    document.write(jugadores + dorsales +"\n"+ "<br>");
+    }
+  </script>
+</body>
+</html>
