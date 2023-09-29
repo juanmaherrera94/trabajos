@@ -13,10 +13,16 @@
 const calcularAreaCirculo=function(base,altura){
    return(base*altura/2)
 };
-const area=calcularAreaCirculo(20,5);
-alert(area);
-
-
+//constructor function
+const calcularPerimetroCuadrado = new Function('lado1', 'return 4 * lado1');
+const lado = 5;
+const perimetro = calcularPerimetroCuadrado(lado);
+console.log('Perímetro del cuadrado:', perimetro);
+//funcion anonima autoinvocable
+(function(radio) {
+    const area = Math.PI * radio * radio;
+    console.log('Área del círculo:', area);
+})(5);
     </script>
     
 </body>
