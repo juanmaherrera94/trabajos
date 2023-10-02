@@ -15,11 +15,11 @@
       "Jugador 4",
       "Jugador 5",
     ];
-    const dorsales=[];
+    let dorsales=3;
 
-    for (let i = 3; i < jugadores.length; i++) {
-    dorsales.push(i*3);
-    document.write(jugadores + dorsales +"\n"+ "<br>");
+    for (let i = 0; i < jugadores.length; i++) {
+    document.write(dorsales+":"+ jugadores[i]);
+    dorsales+=3
     }
   </script>
 </body>
