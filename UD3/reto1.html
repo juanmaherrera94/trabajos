@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let entrada=prompt("Por favor ingresa tu nombre, dos apellidos y año de nacimiento");
+        document.write("El nombre es" + entrada.toUpperCase()+"<br>");
+        let palabras=entrada.split(" ");
+        let nombre=palabras[0];
+        let apellido1 = palabras[1];
+        let apellido2 = palabras[2];
+        let anio=palabras[3];
+        document.write("El nombre de usuario es + \n" +"\n" + nombre.charAt(0) + apellido1.charAt(0)+apellido2.charAt(0) + anio.substring(2,4));
+    </script>
+</body>
+</html>
