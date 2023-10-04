@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pregunta = prompt("¿Se puede borrar con un antivirus?");
+        if (pregunta.toUpperCase() === "SI") {
+            let pregunta2 = "Se puede multiplicar";
+            if (pregunta2.toUpperCase() === "SI") {
+                alert("Es un gusano");
+            } else {
+                alert("Es un troyano");
+            }
+        } else if (pregunta.toUpperCase() === "NO") {
+            let pregunta3 = prompt("Se puede solucionar con una actualizacion");
+            if (pregunta3.toUpperCase() === "SI") {
+                alert("Es un bug o spam");
+            } else {
+                alert("Es un exploit");
+            }
+        } else {
+            alert("Respuesta erronea");
+        }
+    </script>    
+</body>
+</html>

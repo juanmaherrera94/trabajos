@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas del día</title>
+</head>
+<body>
+    <h1>Horas del día</h1>
+    <ul id="horas"></ul>
+
+    <script>
+
+     for (let i = 8; i <= 20; i++) {
+        for(let x=0;x<=30;x+=30){
+           const horaFormateada=i.toString().padStart(2,"0");
+           const minForm= x.toString().padStart(2,"0");
+
+           const tiempo = horaFormateada + ':' + minForm;
+           document.write(tiempo + "<br>");
+        }
+     }
+    </script>
+</body>
+</html>
