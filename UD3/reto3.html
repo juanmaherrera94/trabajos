@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let entrada=prompt("Por favor ingresa tu nombre, dos apellidos y año de nacimiento");
+        document.write("El nombre es" + entrada.toUpperCase()+"<br>");
+        let palabras=entrada.split(" ");
+        let nombre=palabras[0];
+        let apellido1 = palabras[1];
+        let apellido2 = palabras[2];
+        let anio=palabras[3];
+
+    const contarVocales=(cadena) =>{
+    const vocales = "AEIOUaeiou";
+    let contador = 0;
+    for (let i = 0; i < cadena.length; i++) {
+    if (vocales.includes(cadena[i])) {
+      contador++;
+    }
+  }
+  return contador;
+}
+
+const numeroVocales = contarVocales(entrada);
+document.write("El numero de vocales es: " + numeroVocales);
+    </script>
+</body>
+</html>
