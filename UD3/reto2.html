@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let entrada=prompt("Por favor ingresa tu nombre, dos apellidos y año de nacimiento");
+        document.write("El nombre es" + entrada.toUpperCase()+"<br>");
+        let palabras=entrada.split(" ");
+        let nombre=palabras[0];
+        let apellido1 = palabras[1];
+        let apellido2 = palabras[2];
+        let anio=palabras[3];
+        let nombreCompleto=nombre + " " + apellido1 + " " + apellido2;
+        let tamanio=nombreCompleto.length;
+        document.write("Nombre de usuario es \n" + nombreCompleto + "y el tamanio de la cadena que contiene es de : " +tamanio);
+    </script>
+
+</body>
+</html>
