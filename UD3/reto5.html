@@ -3,20 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quinielas</title>
 </head>
 <body>
-    <p>Selecciona el tipo de lotería que deseas y haz clic en "Generar Números":</p>
-
-    <label for="loteria">Selecciona el tipo de lotería:</label>
-    <select id="loteria">
-        <option value="loteriaNacional">Lotería Nacional</option>
-        <option value="quiniela">Quiniela</option>
-        <option value="primitiva">Primitiva</option>
-    </select>
     <script>
-        let entrada=prompt("Elige un tipo de loteria (Loteria nacional,Quiniela,Primitiva");
+        const generarLoteria = () => {
+            const tipoDeLoteria = prompt("Selecciona un tipo de lotería: (Lotería Nacional, Quiniela, Primitiva)");
+            let resultado = "";
 
+            switch (tipoDeLoteria) {
+                case "loteria nacional":
+                    resultado = "Loteria acional: " + generarNumero(3) + generarNumero(3) + generarNumero(3) + generarNumero(3) ;
+                    break;
+                case "quiniela":
+                    resultado = "Quiniela: " + calcularQuiniela();
+                    break;
+                case "primitiva":
+                    resultado = "Primitiva: " + generarNumerosPrimitiva();
+                    break;
+                default:
+                    resultado = "Selecciona un tipo de lotería válido";
+                    break;
+            }
+
+           document.write(resultado)
+        }
+
+        const calcularQuiniela = () => {
+            let numero=0;
+            let resultado="";
+            for (let i = 1; i <= 14; i++) {
+                numero = Math.floor(Math.random() * 3) + 1;
+                if (numero === 1) {
+                    resultado += "1 ";
+                } else if (numero === 2) {
+                    resultado += "X ";
+                } else {
+                    resultado += "2 ";
+                }
+            }
+            return resultado;
+        }
+
+        const generarNumero = (cantidadDigitos) => {
+            let numero = 0;
+            for (let i = 0; i < cantidadDigitos; i++) {
+                numero += Math.floor(Math.random() * 10);
+            }
+            return numero;
+        }
+
+        const generarNumerosPrimitiva = () => {
+            const numerosPrimitiva = [];
+            for (let i = 0; i < 6; i++) {
+                numerosPrimitiva.push(Math.floor(Math.random() * 49) + 1);
+            }
+            return numerosPrimitiva;
+        }
+
+     generarLoteria();
     </script>
 </body>
 </html>
