@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TOTAL DIAS DE SOLSTICIO EN VERANO</h1>
+    <script>
+        const contarSabadosSolsticio=()=> {
+  let contador = 0;
+  for (let anio = 2000; anio <= 2100; anio++) {
+   
+    const fecha = new Date(anio, 5, 20); 
+    const diaDeLaSemana = fecha.getDay();
+    
+    if (diaDeLaSemana === 6) {
+      contador++;
+    }
+  }
+  return contador;
+}
+
+const total = contarSabadosSolsticio();
+document.write("Desde el año 2000 hasta el año 2100 el solsticio de verano cae en sabado : " + total);
+
+    </script>
+</body>
+</html>

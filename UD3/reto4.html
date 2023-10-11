@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const convertirBase = ()=> {
+        const numero = prompt("Introduce un número:");
+        const baseActual = prompt("Indica la base actual (binario, decimal, octal, o hexadecimal):").toLowerCase();
+
+  let decimalNumero;
+
+  switch (baseActual) {
+    case "binario":
+      decimalNumero = parseInt(numero, 2);
+      break;
+    case "decimal":
+      decimalNumero = parseFloat(numero);
+      break;
+    case "octal":
+      decimalNumero = parseInt(numero, 8);
+      break;
+    case "hexadecimal":
+      decimalNumero = parseInt(numero, 16);
+      break;
+    default:
+      alert("Base no válida.");
+      return;
+  }
+
+  const binario = decimalNumero.toString(2);
+  const octal = decimalNumero.toString(8);
+  const hexadecimal = decimalNumero.toString(16).toUpperCase();
+
+  alert("En binario : " +binario + "\n" +
+        "En decimal : " + decimalNumero + "\n" +
+        "En octal : " + octal + "\n" +
+        "En hexadecimal : " + hexadecimal + "\n");
+}
+
+convertirBase();
+
+        
+
+    </script>
+    
+</body>
+</html>
