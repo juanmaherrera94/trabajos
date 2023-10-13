@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const validarEntrada=()=>{
+            const respuesta= prompt("¿Cual fue el primer presidente de la democracia española?");
+            const nombre="Adolfo";
+            const apellidoCorrecto="Suarez"
+            if (respuesta === nombre && apellidoCorrecto) {
+                document.write("Bienvenido a la pagina");
+            } else if (respuesta === nombre) {
+        // El usuario olvido el apellido
+            alert("Te falta el apellido. Intentelo de nuevo.");
+            validarEntrada();
+             } else if (respuesta === apellidoCorrecto) {
+        // El usuario olvido el nombre
+             alert("Te falta el nombre. Intentelo de nuevo.");
+             validarEntrada();
+             } else {
+        // Respuesta incorrecta
+             alert("ERROR: Intentelo de nuevo.");
+             validarEntrada();
+         }
+    }
+        validarEntrada();
+    </script>
+</body>
+</html>
