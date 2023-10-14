@@ -6,6 +6,65 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="preguntas">
+        <h2 id="categoria">Categoria</h2>
+        <p id="pregunta"></p>
+        <input type="text" id="respuesta" placeholder="Escribe tu respuesta aquí">
+        <button id="enviar">Enviar</button>
+    </div>
+    <p id="puntos">Puntos: 0</p>
+    <p id="fallos">Fallos: 0</p>
+    <script>
+        const preguntas = [
+          { categoria: "Geografia", pregunta: "¿Cual es la capital de Francia?", respuesta: "Paris" },
+          { categoria: "Arte", pregunta: "¿Quien pinto La Mona Lisa?", respuesta: "Leonardo da Vinci" },
+          { categoria: "Espectaculos", pregunta: "¿En que año se estreno la pelicula 'El Padrino'?", respuesta: "1972" },
+          { categoria: "Historia", pregunta: "¿Quien fue el primer presidente de los Estados Unidos?", respuesta: "George Washington" },
+          { categoria: "Ciencias", pregunta: "¿Cual es el símbolo químico del oro?", respuesta: "Au" },
+          { categoria: "Deportes", pregunta: "¿Que equipo le retiró el dorsal a Jude?", respuesta: "Birmingham City"}
+        ];
+
+        let puntos = 0;
+        let errores = 0;
+        let preguntaActual = null;
+        const categoriaElement = document.getElementById("categoria");
+        const preguntaElement = document.getElementById("pregunta");
+        const respuestaElement = document.getElementById("respuesta");
+        const enviarButton = document.getElementById("enviar");
+        const puntosElement = document.getElementById("puntos");
+        const fallosElement = document.getElementById("fallos");
+
+        // Función para obtener una nueva pregunta
+        function obtenerNuevaPregunta() {
+            if (preguntas.length > 0) {
+                const indice = Math.floor(Math.random() * preguntas.length);
+                preguntaActual = preguntas.splice(indice, 1)[0];
+                categoriaElement.textContent = "Categoría:" +preguntaActual.categoria;
+                preguntaElement.textContent = preguntaActual.pregunta;
+            } else {
+                preguntaActual = null;
+                categoriaElement.textContent = "Juego terminado";
+                preguntaElement.textContent = "";
+                respuestaElement.style.display = "none";
+                enviarButton.style.display = "none";
+            }
+        }
+
+        enviarButton.addEventListener("click", function() {
+            const respuestaJugador = respuestaElement.value;
+            if (respuestaJugador.toLowerCase() === preguntaActual.respuesta.toLowerCase()) {
+                puntos++;
+                puntosElement.textContent = "Puntos: " + puntos;
+            } else {
+                errores++;
+                fallosElement.textContent = "Fallos: " + errores;
+            }
+
+            obtenerNuevaPregunta();
+        });
+
+        // Comenzar el juego obteniendo la primera pregunta
+        obtenerNuevaPregunta();
+    </script>
 </body>
 </html>
