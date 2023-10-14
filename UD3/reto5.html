@@ -8,12 +8,12 @@
 <body>
     <script>
         const generarLoteria = () => {
-            const tipoDeLoteria = prompt("Selecciona un tipo de lotería: (Lotería Nacional, Quiniela, Primitiva)");
+            const tipoDeLoteria = prompt("Selecciona un tipo de loteria: (Loteria Nacional, Quiniela, Primitiva)");
             let resultado = "";
 
-            switch (tipoDeLoteria) {
+            switch (tipoDeLoteria.toLowerCase()) { 
                 case "loteria nacional":
-                    resultado = "Loteria acional: " + generarNumero(3) + generarNumero(3) + generarNumero(3) + generarNumero(3) ;
+                    resultado = "Loteria Nacional: " + calcularLoteriaNacional();
                     break;
                 case "quiniela":
                     resultado = "Quiniela: " + calcularQuiniela();
@@ -22,16 +22,16 @@
                     resultado = "Primitiva: " + generarNumerosPrimitiva();
                     break;
                 default:
-                    resultado = "Selecciona un tipo de lotería válido";
+                    resultado = "Selecciona un tipo de loteria valido";
                     break;
             }
 
-           document.write(resultado)
+           document.write(resultado);
         }
 
         const calcularQuiniela = () => {
-            let numero=0;
-            let resultado="";
+            let numero = 0;
+            let resultado = "";
             for (let i = 1; i <= 14; i++) {
                 numero = Math.floor(Math.random() * 3) + 1;
                 if (numero === 1) {
@@ -45,12 +45,12 @@
             return resultado;
         }
 
-        const generarNumero = (cantidadDigitos) => {
-            let numero = 0;
-            for (let i = 0; i < cantidadDigitos; i++) {
-                numero += Math.floor(Math.random() * 10);
+        const calcularLoteriaNacional = () => {
+            let numeros = [];
+            for (let i = 0; i < 5; i++) {
+                numeros[i] = Math.floor(Math.random() * 9);
             }
-            return numero;
+            return numeros;
         }
 
         const generarNumerosPrimitiva = () => {
@@ -61,7 +61,7 @@
             return numerosPrimitiva;
         }
 
-     generarLoteria();
+        generarLoteria();
     </script>
 </body>
 </html>
