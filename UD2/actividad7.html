@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //declaro los patrones como expresiones regulares
+const patrones=[/00/g,/101/g,/ABC/g,/H0/g];
+
+let entrada=prompt("Dime una frase que contenga los patrones ('00', '101', 'ABC', 'HO')");
+
+let contador=0;
+
+
+//recorro los patrones y con la expresiones regulares contamos las veces que aparece
+
+for (let i=0;i < patrones.length; i++){
+
+const expresion=entrada.match(patrones[i]);
+if (expresion){
+    contador += expresion.length;
+}
+
+}
+
+alert("El numero de veces que se repiten los patrones es: " + contador);
+    </script>
+</body>
+</html>
