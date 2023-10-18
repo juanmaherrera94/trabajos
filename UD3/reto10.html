@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINDOWTIEMPO</title>
+</head>
+<body>
+    <h1>Reloj</h1>
+    <p id="reloj">00:00:00</p>
+
+    <h1>Cronometro</h1>
+    <p id="cronometro">00:00:00</p>
+    <button id="iniciarCrono">Iniciar</button>
+    <button id="detenerCrono">Detener</button>
+    <button id="reiniciarCrono">Reiniciar</button>
+
+    <script>
+        const reloj=document.getElementById("reloj");
+        const cronometro=document.getElementById("cronometro");
+        const botonIniciar=document.getElementById("inciciarCrono");
+        const botonDetener=document.getElementById("detenerCrono");
+        const botonreniciar=document.getElementById("reiniciarCrono");
+
+    
+        const actualizarReloj=()=> {
+        const fecha = new Date();
+        const tiempoActual = fecha.toLocaleTimeString();
+        reloj.textContent= tiempoActual;
+}
+actualizarReloj();
+    </script>
+</body>
+
+</html>

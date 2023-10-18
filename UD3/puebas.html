@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const idTimeout=setTimeout(()=> console.log('Timeout que se ejecuta al cabo de 1 seg.',1000));
+        let i =1;
+        const idInterval = setInterval(()=>{
+            console.log('Interval cada 3 seg. Ejecucion nº:'+ i++);
+            if (i===5){
+                clearInterval(idInterval);
+                console.log('Fin de la ejecucion del Interval');
+            }
+
+        },3000);
+    </script>
+</body>
+</html>

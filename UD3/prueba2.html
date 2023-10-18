@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const abrirVentana=()=>{
+            const miVentana=window.open("","_blank","width=200,height=100,scrollbars=no,toolbar=no,navigation=no");
+            miVentana.document.write(`<h1>Bienvenido</h1>`);
+            miVentana.document.write(`<button id="close">Close</button>`);
+            miVentana.document.getElementById("close").addEventListener("click",()=>{
+                miVentana.close();
+            });
+         }
+         setTimeout(abrirVentana,2000);
+        
+    </script>
+</body>
+</html>
