@@ -6,30 +6,21 @@
     <title>WINDOWTIEMPO</title>
 </head>
 <body>
-    <h1>Reloj</h1>
-    <p id="reloj">00:00:00</p>
 
     <h1>Cronometro</h1>
-    <p id="cronometro">00:00:00</p>
     <button id="iniciarCrono">Iniciar</button>
     <button id="detenerCrono">Detener</button>
     <button id="reiniciarCrono">Reiniciar</button>
+    <button id="record">Record</button>
 
-    <script>
-        const reloj=document.getElementById("reloj");
-        const cronometro=document.getElementById("cronometro");
-        const botonIniciar=document.getElementById("inciciarCrono");
-        const botonDetener=document.getElementById("detenerCrono");
-        const botonreniciar=document.getElementById("reiniciarCrono");
+    <div>
+        <p id="timer"></p>
+    </div>
 
-    
-        const actualizarReloj=()=> {
-        const fecha = new Date();
-        const tiempoActual = fecha.toLocaleTimeString();
-        reloj.textContent= tiempoActual;
-}
-actualizarReloj();
-    </script>
+    <div id="marks">
+
+    </div>
+    <script src="reto10.js"></script>
 </body>
 
 </html>
