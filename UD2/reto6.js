@@ -1,3 +1,10 @@
+/*
+Realiza una función que reciba un array bidimensional (de longitud variable) un escenario de Buscaminas, donde haya un 0 donde no hay minas y un -1 donde si hay.
+Mas información de como funciona el Buscaminas
+Para cada casilla que no tenga una mina, diga cuantas minas adyacentes hay en diagonal, horizontal y vertical.
+Internamente el programa realizará las acciones con una función definida como
+La función devolverá un array bidimensional con el numero de minas adyacentes en cada posición.
+**/
 const buscaminas = (tablero) => {
     const filas = tablero.length; // Obtener la cantidad de filas del tablero
     const columnas = tablero[0].length; // Obtener la cantidad de columnas del tablero
