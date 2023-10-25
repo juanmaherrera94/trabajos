@@ -6,21 +6,27 @@ class Sandkills {
         this.companiero = companiero;
     }
     mostrar() {
+
         return "Nombre: " + this.getNombre() + ", Edad: " + this.getEdad() + ", Especialidad: " + this.getEspecialidad() + ", Compañero: " + this.getNombreCompaniero();
     }
-    
+
     getNombre() {
+
         return this.nombre;
     }
     getEdad() {
+
         return this.edad;
+        
     }
     getEspecialidad() {
         switch (this.especialidad) {
             case 1:
                 return "Sistemas";
+                break;
             case 2:
                 return "Web";
+                break;
             case 3:
                 return "Multiplaforma"
             default:
@@ -70,5 +76,4 @@ const sandkill1=new Sandkills("Alberto",22,3,null);
 const sandkill2=new Sandkills("Maria",33,2,sandkill1);
 
 console.log(sandkill1.mostrar());
-
 console.log(sandkill2.mostrar());
