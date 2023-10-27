@@ -72,8 +72,4 @@ class Sandkills {
     }
 }
 
-const sandkill1=new Sandkills("Alberto",22,3,null);
-const sandkill2=new Sandkills("Maria",33,2,sandkill1);
-
-console.log(sandkill1.mostrar());
-console.log(sandkill2.mostrar());
+module.exports=Sandkills;
