@@ -21,7 +21,7 @@ class Personal{
         this.salario=nuevoSalario;
     }
     toString(){
-        return `El nombre del paciente es ${this.nombre} con especialidad ${this.especialidad} y salario ${this.salario}`;
+        return `El nombre del personal es ${this.nombre} con especialidad ${this.especialidad} y salario ${this.salario}`;
     }
     
 }

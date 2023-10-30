@@ -1,3 +1,7 @@
+/**
+ * Clase que representa el hospital.
+ * @class
+ */
 class Hospital{
     constructor(nombre,localidad,responsable){
         this.nombre=nombre;
