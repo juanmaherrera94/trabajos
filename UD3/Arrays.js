@@ -1,31 +1,26 @@
+const Sandkills = require("./Sandkills");
+
 class Arrays{
     constructor(){
         this.arraySandkills=[];
     }
-    inserAlPrincipio(sandkill){
-        this.arraySandkills.unshift(sandkill);
+    inserAlPrincipio(sandkill1){
+        this.arraySandkills.unshift(sandkill1);
     }
-    inserAlFinal(sandkill){
-        this.arraySandkills.push(sandkill);
+    inserAlFinal(sandkill1){
+        this.arraySandkills.push(sandkill1);
     }
-    borrarPrimero(){
-        this.arraySandkills.shift();
+    borrarPrimero(sandkill1){
+        this.arraySandkills.shift(sandkill1);
     }
-    borrarUltimo(){
-        this.arraySandkills.pop();
+    borrarUltimo(sandkill1){
+        this.arraySandkills.pop(sandkill1);
     }
     mostrarLista(){
-    return this.arraySandkills;
-    }
-    mostrarListaOrdenada(){
-        this.arraySandkills.sort((a,b)=>a.getEdad()-b.getEdad());
-        this.mostrarLista();
-    }
-    buscarPorNombre(nombre) {
-        return this.arraySandkills.find(sandkill=> sandkill.getNombre() === nombre);
-    }
-    buscarPorPosicion(posicion) {
-        this.arraySandkills.slice(posicion, posicion + 1);
+  
+
     }
 }
+const sandkill1 = new Sandkills("Juande","39","Informatico",null);
+console.log(sandkill1);
 module.exports=Arrays;

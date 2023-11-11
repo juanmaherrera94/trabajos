@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+      <!--
+    Ejercicio 3
+    Juanma Herrera
+    Realiza un programa que pregunte una letra de la A a la Z. 
+    Tras ello el programa indicará cuántos DNIs de 3 cifras (del 001 al 999) tienen esa
+    letra y tras ello te mostrará “de golpe” el listado de todos los DNIs que tienen esa letra.
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        
+        const letras=["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+        const pedirLetra=prompt("Escribe una letra de la A a la Z: ");
+        const dni=[];
+        const resultado=letras.indexOf(pedirLetra);
+
+        for(let i=1;i<999;i++){
+            if(i%23 == resultado){
+                dni.push(i);
+            }
+        }
+        document.write(`Los DNI que tienen esa letra son: ${dni}` + "<br>");
+    </script>
+</body>
+</html>

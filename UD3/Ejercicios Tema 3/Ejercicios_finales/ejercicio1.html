@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    Ejercicio 1
+    Juanma Herrera
+    Realiza un programa que cada 20 segundos (mediante setInterval) 
+    solicite un DNI hasta que alguien le escriba la cadena “-1”.
+    En ese momento, el programa debe mostrar seguidas las letras de todos los DNIs introducidos.
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <script>
+        const validarDNI = (dni) => {//metodo para validad un dni
+            const letras = "TRWAGMYFPDXBNJZSQVHLCKE"
+            const indice = dni % 23;
+            return letras.charAt(indice);
+        }
+        const pedirDNI = () => {//metodo que pide un dni
+            const arrayDNI = [];
+            const dni = parseInt(prompt("Inserte un dni (para finalizar escriba -1): "));
+            if (dni === -1) {
+                clearInterval(intervalo);
+                mostrarLetrasDNI();
+            } else {
+                const letra = validarDNI(dni);
+                arrayDNI.push(dni + letra);
+            }
+        }
+
+        const mostrarLetrasDNI = () => {//metodo que muestra las letras del dni
+            if (arrayDNI.length === 0) {
+                alert("No son válidos");
+            } else {
+                const letras = arrayDNI.join(",");
+                document.write("Las letras de los DNI son: " + letras);
+            }
+        }
+
+        const intervalo = setInterval(pedirDNI, 20000);
+    </script>
+</body>
+
+</html>

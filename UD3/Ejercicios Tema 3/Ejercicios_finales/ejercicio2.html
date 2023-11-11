@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    Ejercicio 2
+    Juanma Herrera
+   Realiza un programa que pasados 20 segundos, nos muestre una sola vez la fecha actual del sistema.
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        const mostrarFecha=setInterval(() => {
+            let fecha=new Date();
+            fecha.toLocaleDateString();
+            document.write(fecha);
+        },20000)
+      
+    </script>
+</body>
+</html>

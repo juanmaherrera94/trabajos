@@ -20,3 +20,6 @@ let dia1=diaDeLaSemana.every(dias=> dias.startsWith("S"));
 let dia2=diaDeLaSemana.some(dias=> dias.endsWith("S"));
 let mayusculas=diaDeLaSemana.map(mayus=>mayus.toUpperCase());
 console.log(mayusculas);
+const diaDeLaSemana2=diaDeLaSemana;
+const eliminarDia=diaDeLaSemana2.pop();
+console.log(diaDeLaSemana2);
