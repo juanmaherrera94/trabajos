@@ -50,7 +50,7 @@ function contandoMinas(campo) {
           }
       }
     }
-  }
+  e}
   return localizacionMinas;
 }
 console.log(contandoMinas(campo));

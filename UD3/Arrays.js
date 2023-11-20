@@ -17,8 +17,7 @@ class Arrays{
         this.arraySandkills.pop(sandkill1);
     }
     mostrarLista(){
-  
-
+        
     }
 }
 const sandkill1 = new Sandkills("Juande","39","Informatico",null);

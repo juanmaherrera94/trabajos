@@ -75,5 +75,4 @@ export class Libro
     {
         this.stock = stock;
     }
-    
 } 

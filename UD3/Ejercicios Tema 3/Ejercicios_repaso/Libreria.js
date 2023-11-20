@@ -47,7 +47,6 @@ class Libreria{
     }
     //buscar libro por id y devuelve un array con los resultados utilizando el metodo filter
     buscarPorId(id){
-
         return this.array_libros.filter(pos=>pos.id===id);
 
     }
